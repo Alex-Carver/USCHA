@@ -1,0 +1,846 @@
+﻿html {
+background: url(images/background.jpg) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+  padding: 0;
+  margin: 0;
+}
+
+@font-face
+{
+font-family: "Alternate Gothic No2 D";
+src: url('/fonts/alternategotno2d.ttf'),
+     url('/fonts/alternategotno2d.eot'); /* IE9+ */
+font-family: Whitin;
+src: url('/fonts/Whitin-CondensedBlack.ttf'),
+     url('/fonts/Whitin-CondensedBlack.eot'); /* IE9+ */
+
+}
+
+@charset "utf-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		4;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	12;
+	dw-gutter-percentage:	15;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+.fluid {
+	clear: both;
+	margin-left: 0;
+	width: 100%;
+	float: left;
+	display: block;
+}
+
+.fluidList {
+    list-style:none;
+    list-style-image:none;
+    margin:0;
+    padding:0;        
+}
+
+body{
+	font-family:"Alternate Gothic No2 D","Futura Md", "Trebuchet MS", Arial, serif;
+	font-size:16pt;
+	color:#FFFFFF;
+	line-height:1;
+/*	letter-spacing: 1pt;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+*/
+
+}
+
+
+/* W3.css overwrites  */
+.w3-container{
+    padding: 5px!important;
+}
+
+.w3-panel {
+    margin-top: -5px!important;
+}
+
+
+.calendarLogo{
+    height: 50px;
+    margin: -10px 5px -5px -5px;   }
+
+.w3-round{
+	margin: 2px;
+    width: 98%;
+}
+
+.w3-input{
+    padding: 10px 0px 10px 3px;
+   }
+/* End W3.css overwrites  */
+
+label{
+    display: block;
+    font-size: .7em;
+    padding-left: 5px;
+}
+.onlyprint{display:none;}
+/* The Magic Float Center Code */
+.float_center {
+  float: right!important;
+
+  position: relative!important;
+  left: -50%!important; /* or right 50% */
+  text-align: left!important;
+}
+.float_center > .child {
+  position: relative!important;
+  left: 50%!important;
+}
+
+/* Back to Top  */
+
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 75px;
+    height: 75px;
+    display: block;
+    text-decoration: none;
+    text-align:center;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 0px;
+    top: 30px;
+    font-size: 30px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+#return-to-top:hover i {
+    color: #fff;
+    top: 10px;
+}
+
+
+
+/* end back to top  */
+
+
+.mainContent {
+	max-width:1300px;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+    padding:0px 10px 10px 10px;
+}
+
+.button-container input {
+    display: inline;
+    vertical-align: middle;
+    margin: 0px 5px 10px 0px;
+}
+.button-container form, .button-container form div {
+    display: inline;
+}
+
+.navContainer {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+	max-width:800px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.pgWrapper{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	max-width:900px;
+}
+
+.colBackground {
+	background-color: rgba(243,229,212,0.50);
+	border: 1px solid black;
+	border-radius:5px;
+}
+
+a:link    {color:#9D8966; text-decoration:underline; font-family: "Alternate Gothic No2 D","Futura Md", "Trebuchet MS", Arial, serif; }
+a:visited {color:#9D8966; text-decoration:underline; font-family: "Alternate Gothic No2 D","Futura Md", "Trebuchet MS", Arial, serif; }
+a:active  {color:#9D8966; text-decoration:none; font-family: "Alternate Gothic No2 D","Futura Md", "Trebuchet MS", Arial, serif; }
+a:hover   {color:#ffffff; text-decoration:none; font-family: "Alternate Gothic No2 D","Futura Md", "Trebuchet MS", Arial, serif; }
+
+a:link.nav    {color: #ffffff; text-transform:uppercase; text-decoration: none; font-family: "Alternate Gothic No2 D","Futura Md", "Trebuchet MS", Arial, serif; font-size: 16pt; text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);}
+a:visited.nav  {color:#ffffff; text-transform:uppercase; text-decoration:none; font-family: "Alternate Gothic No2 D","Futura Md", "Trebuchet MS", Arial, serif; font-size: 16pt; text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);}
+a:active.nav   {color:#ffffff; text-transform:uppercase; text-decoration:none; font-family: "Alternate Gothic No2 D","Futura Md", "Trebuchet MS", Arial, serif; font-size: 16pt; text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);}
+a:hover.nav    {color:#C89A57; text-transform:uppercase; text-decoration: none;	font-family: "Alternate Gothic No2 D","Futura Md", "Trebuchet MS", Arial, serif; font-size: 16pt; text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);}
+
+
+a:link.menu    {border-right:1px solid #DAA021; color: #000000; text-transform:uppercase; text-decoration: none; font-family: "Alternate Gothic No2 D","Futura Md", "Trebuchet MS", Arial, serif; font-size: 16pt; text-shadow: none;}
+a:visited.menu  {border-right:1px solid #DAA021; color:#000000; text-transform:uppercase; text-decoration:none; font-family: "Alternate Gothic No2 D","Futura Md", "Trebuchet MS", Arial, serif; font-size: 16pt; text-shadow: none;}
+a:active.menu   {border-right:1px solid #DAA021; color:#000000; text-transform:uppercase; text-decoration:none; font-family: "Alternate Gothic No2 D","Futura Md", "Trebuchet MS", Arial, serif; font-size: 16pt; text-shadow: none;}
+a:hover.menu    {border-right:1px solid #DAA021; color:#000000; text-transform:uppercase; text-decoration: none;	font-family: "Alternate Gothic No2 D","Futura Md", "Trebuchet MS", Arial, serif; font-size: 16pt; text-shadow: none;}
+
+a:link.sm    {color: #ffffff; text-decoration: underline; font-family: Arial, 'Sans Serif'; font-weight: bold; font-size: 9pt;  }
+a:visited.sm  {color: #ffffff; text-decoration:underline; font-family: Arial, Sans Serif; font-weight: bold; font-size: 9pt; }
+a:active.sm   {color: #ffffff; text-decoration:underline; font-family: Arial, Sans Serif; font-weight: bold; font-size: 9pt; }
+a:hover.sm    {color: #421208; text-decoration:none; font-family: Arial,Sans Serif; font-weight: bold; font-size: 9pt;}
+
+a:link.nameLink    {color:#9D8966; text-transform:uppercase; text-decoration:none; font-weight:normal; font-family: "Alternate Gothic No2 D","Futura Md", "Trebuchet MS", Arial, serif; font-size: 16pt; }
+a:visited.nameLink {color:#9D8966; text-transform:uppercase; text-decoration:none; font-weight:normal; font-family: "Alternate Gothic No2 D","Futura Md", "Trebuchet MS", Arial, serif; font-size: 16pt; }
+a:active.nameLink  {color:#9D8966; text-transform:uppercase; text-decoration:none; font-weight:normal; font-family: "Alternate Gothic No2 D","Futura Md", "Trebuchet MS", Arial, serif; font-size: 16pt; }
+a:hover.nameLink   {color:#607883; text-transform:uppercase; text-decoration:none; font-weight:normal; font-family: "Alternate Gothic No2 D","Futura Md", "Trebuchet MS", Arial, serif; font-size: 16pt; }
+
+a:link.header    {color:#ffffff; text-decoration:underline; font-family: "Alternate Gothic No2 D","Futura Md", "Trebuchet MS", Arial, serif; font-size: 14pt;}
+a:visited.header  {color:#ffffff; text-decoration:underline; font-family: "Alternate Gothic No2 D","Futura Md", "Trebuchet MS", Arial, serif; font-size: 14pt;}
+a:active.header   {color:#ffffff; text-decoration:none; font-family: "Alternate Gothic No2 D","Futura Md", "Trebuchet MS", Arial, serif; font-size: 14pt;}
+a:hover.header    {color:#9D8966; text-decoration:none; font-family: "Alternate Gothic No2 D","Futura Md", "Trebuchet MS", Arial, serif; font-size: 14pt;}
+
+
+a:link.backlink   {color:#C89A57; font-size:10pt; text-decoration:underline; font-family: "Alternate Gothic No2 D","Futura Md", "Trebuchet MS", Arial, serif; }
+a:visited.backlink  {color:#C89A57; font-size:10pt; text-decoration:underline; font-family: "Alternate Gothic No2 D","Futura Md", "Trebuchet MS", Arial, serif; }
+a:active.backlink   {color:#C89A57; font-size:10pt; text-decoration:none; font-family: "Alternate Gothic No2 D","Futura Md", "Trebuchet MS", Arial, serif; }
+a:hover.backlink    {color:#ffffff; font-size:10pt; text-decoration:none; font-family: "Alternate Gothic No2 D","Futura Md", "Trebuchet MS", Arial, serif; }
+
+
+.img{
+	border:2px solid #000000;
+	margin:5px;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(200, 153, 87, 0.75);
+    -moz-box-shadow:    0px 0px 5px 0px rgba(200, 153, 87, 0.75);
+    box-shadow:         0px 0px 5px 0px rgba(200, 153, 87, 0.75);
+}
+
+
+h1{
+	font-family: Whitin, Georgia,"Times New Roman", Times, serif;
+	font-size:18pt;
+	text-transform:uppercase;
+	font-weight:normal;
+	color:#C89A57;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+}
+
+
+h2{
+	font-family: Whitin, Georgia,"Times New Roman", Times, serif;
+	font-size:16pt;
+	text-transform:uppercase;
+	font-weight:normal;
+	color:#C89A57;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+}
+
+hr{
+	border:1px dotted #000000;
+	margin: 2px 15px 10px 0px!important;
+
+}
+
+/* Float Shadow */
+.float-shadow {
+  display: inline-block;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.float-shadow:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  /* W3C */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform, opacity;
+  transition-property: transform, opacity;
+}
+.float-shadow:hover, .float-shadow:focus, .float-shadow:active {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  /* move the element up by 5px */
+}
+.float-shadow:hover:before, .float-shadow:focus:before, .float-shadow:active:before {
+  opacity: 1;
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+  /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+}
+
+
+/* Mobile Layout: 480px and below. */
+  
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 96.7391%;
+	padding-left: 1.6304%;
+	padding-right: 1.6304%;
+	clear: none;
+	float: none;
+}
+#div1 {
+}
+#headerBackground {
+     background-image: url('images/top.jpg'); 
+     background-position:center;
+     display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+#navBackground {
+	background: rgba(252,206,0,1);
+background: -moz-linear-gradient(top, rgba(252,206,0,1) 0%, rgba(217,153,26,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(252,206,0,1)), color-stop(100%, rgba(217,153,26,1)));
+background: -webkit-linear-gradient(top, rgba(252,206,0,1) 0%, rgba(217,153,26,1) 100%);
+background: -o-linear-gradient(top, rgba(252,206,0,1) 0%, rgba(217,153,26,1) 100%);
+background: -ms-linear-gradient(top, rgba(252,206,0,1) 0%, rgba(217,153,26,1) 100%);
+background: linear-gradient(to bottom, rgba(252,206,0,1) 0%, rgba(217,153,26,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcce00', endColorstr='#d9991a', GradientType=0 );
+	background-position:center; 
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom:20px;
+	text-align: center;
+	border: 2px solid #FFE059;
+	border: 4px solid #F2C13E;
+	-webkit-box-shadow: 0px 25px 20px -25px rgba(0,0,0,0.99);
+-moz-box-shadow: 0px 25px 20px -25px rgba(0,0,0,0.99);
+box-shadow: 0px 25px 20px -25px rgba(0,0,0,0.99);
+border-radius:5px;
+}
+
+.zeroMargin_mobile {
+margin-left: 0;
+}
+#contentBackground {
+background-image: url('images/contentbackground.jpg'); 
+background-position: center top; 
+background-repeat:repeat-x;
+background-color: #170103;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.hide_mobile {
+display: none;
+}
+
+#footerBackground {
+     background-image: url('images/bottom.jpg'); 
+     background-position:center;
+     display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight:bold;
+}
+
+.figure item {
+    /* To correctly align image, regardless of content height: */
+    vertical-align: top;
+    display: inline-block;
+    /* To horizontally center images and caption */
+    text-align: center;
+    /* The width of the container also implies margin around the images. */
+    width: 120px;
+}
+.figure img {
+    width: 100%;
+    height: 69px;
+}
+.figure caption {
+    /* Make the caption a block so it occupies its own line. */
+    display: block;
+}
+
+.menuImg{
+	display:none;
+}
+
+.navbar-fixed-top {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position:-o-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+-webkit-transition: height 0.5s;
+-moz-transition: height 0.5s;
+transition: height 0.5s;
+}
+
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+
+.gridContainer {
+	width: 98.3695%;
+	padding-left: 0.8152%;
+	padding-right: 0.8152%;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+#div1 {
+}
+#headerBackground {
+}
+#navBackground {
+}
+#navContainer {
+}
+#contentBackground {
+background-image: url('images/contentbackground.jpg'); 
+background-position: center top; 
+background-repeat:repeat-x;
+background-color: #170103;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.hide_tablet {
+display: none;
+}
+.zeroMargin_tablet {
+margin-left: 0;
+}
+}
+
+/* Desktop Layout: 769px to a max of 1500px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+
+.gridContainer {
+	width: 98.913%;
+	max-width:1500px;
+	padding-left: 0.5434%;
+	padding-right: 0.5434%;
+	margin: auto;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+#div1 {
+}
+#headerBackground {
+}
+#navBackground {
+}
+#navContainer {
+}
+#contentBackground {
+}
+
+.zeroMargin_desktop {
+margin-left: 0;
+}
+.hide_desktop {
+display: none;
+}
+.menuImg{
+	display:block;
+}
+
+}
+
+/* -----------------------------------
+Form - narrow
+----------------------------------- */
+
+.row-form {
+	clear: left;
+	overflow: hidden;
+	zoom: 1;
+	margin: 0 0 1em;
+}
+
+.label {
+	display: block;
+	margin: 0 0 .1em;
+}
+
+.input, .select, .textarea {
+	width: 100%;
+ *width: 90%;
+	box-sizing: border-box;
+	border: 0px solid #999;
+	border-radius: .3em;
+}
+
+.input, .textarea {
+	padding: 5px;
+}
+
+.textarea {
+	height: 150px;
+}
+
+.radio {
+	margin-left: 1px;
+	margin-right: .5em;
+}
+
+.form-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.btn {
+	display: inline-block;
+	margin: 0;
+	padding: .5em .75em;
+	border: 0;
+	border-radius: .3em;
+	color: #fff;
+	background-color: #C29F56;
+	line-height: 1;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+}
+
+.btn:focus {
+	background-color: #3E0101;
+}
+
+.btn:hover {
+	background-color: #3E0101;
+}
+
+.btn:active {
+	background-color: #C29F56;
+}
+
+/* -----------------------------------
+Form - wide
+----------------------------------- */
+
+@media (min-width:33em) {
+
+.submission-form {
+	max-width: 40em;
+}
+
+.label {
+	float: left;
+	width: 25%;
+	margin: 0 2% 0 0;
+	text-align: right;
+}
+
+.input, .select, .textarea {
+	float: left;
+	width: 70%;
+}
+
+.form-indent {
+	margin-left: 27%;
+	width: 70%;
+}
+}
+
+/***** HORSE AREA FORMATTING *****/
+
+
+#widehorselistingpic {
+	text-align: center;
+}
+
+.smallimage {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top:10px;
+	border: 2px solid #000000;
+	padding: 0px;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(200, 153, 87, 0.75);
+    -moz-box-shadow:    0px 0px 5px 0px rgba(200, 153, 87, 0.75);
+    box-shadow:         0px 0px 5px 0px rgba(200, 153, 87, 0.75);
+
+
+}
+
+.largeimage {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom:20px;
+	border: 2px solid #000000;
+	padding: 0px;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(200, 153, 87, 0.75);
+    -moz-box-shadow:    0px 0px 5px 0px rgba(200, 153, 87, 0.75);
+    box-shadow:         0px 0px 5px 0px rgba(200, 153, 87, 0.75);
+	width:75%;
+}
+
+.largepedtable td {
+	vertical-align: middle;
+}
+
+.medpedtable td {
+	vertical-align: middle;
+}
+
+.smallpedtable td {
+	vertical-align: middle;
+}
+
+.pedigreeline {
+	max-width: 95%;
+	text-align: left;
+	margin-left: 0;
+	margin-top: 0px;
+}
+
+.smallFont {
+	font-size: 0.8em;
+}
+
+/* for Sale Comment and Sold */
+.hiLiteComment {
+	background-color: #000000;
+	color: #C89A57;
+	font-weight: bold;
+	font-size:11pt;
+}
+
+/* for horse name on details page and for horse type heading on listing pages */
+/* for horse name on details page and for horse type heading on listing pages */
+.horseHeading{
+	font-size: 22px;
+	font-weight:bold;
+	text-transform: uppercase;
+	color: #9D8966;
+	letter-spacing: 1px
+}
+
+.pageheading {
+	/*font-size: 12pt; font-variant: small-caps; color: #954A00; font-weight: bold */
+	font-family: Whitin, Georgia,"Times New Roman", Times, serif;
+	font-size:18pt;
+	text-transform:uppercase;
+	font-weight:normal;
+	color:#C89A57;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+}
+
+/* for header links in listing table */
+.header {
+	font-family: Calibri, "Times New Roman", Times, serif;
+	font-weight: bold;
+	font-size: 14pt;
+}
+
+
+/* for horse name Links on listing pages */
+.nameLink {
+	font-family: Calibri, "Times New Roman", Times, serif;
+	font-weight: bold;
+	font-size: 14pt;
+	color:#ffffff;
+}
+
+a:link.nameLink {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+a:visited.nameLink {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+a:active.nameLink {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+a:hover.nameLink {
+	color: #C29F56;
+	text-decoration: none;
+}
+
+/* for links in pedigree table */
+.pedName {
+	font-family: Calibri, "Times New Roman", Times, serif;
+	font-size: 12pt;
+	text-transform:uppercase;
+	color:#D9C389;
+}
+
+a:link.pedName {
+	color: #D9C389;
+	text-decoration: underline;
+}
+
+a:visited.pedName {
+	color: #D9C389;
+	text-decoration: underline;
+}
+
+a:active.pedName {
+	color: #D9C389;
+	text-decoration: none;
+}
+
+a:hover.pedName {
+	color: #C29F56;
+	text-decoration: none;
+}
+
+.pedNotes {
+	font-size: 8pt;
+}
+
+.backlink{font-size: 10pt;}
+
+.tiny {
+	font-size: 10pt;
+}
+
+a:link.tiny {
+	color: #C29F56;
+	text-decoration: underline;
+}
+
+a:visited.tiny {
+	color: #C29F56;
+	text-decoration: underline;
+}
+
+a:active.tiny {
+	color: #C29F56;
+	text-decoration: none;
+}
+
+a:hover.tiny {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.widehorselisting {
+	border: 3px dashed #521E01;
+	background-image: -webkit-linear-gradient(270deg, rgba(0,0,0,0.10) 0%, rgba(78,1,1,0.00) 100%);
+	background-image: -moz-linear-gradient(270deg, rgba(0,0,0,0.10) 0%, rgba(78,1,1,0.00) 100%);
+	background-image: -o-linear-gradient(270deg, rgba(0,0,0,0.10) 0%, rgba(78,1,1,0.00) 100%);
+	background-image: linear-gradient(180deg, rgba(0,0,0,0.10) 0%, rgba(78,1,1,0.00) 100%);
+	-webkit-box-shadow: 0px 0px 15px 0px #3A0101;
+	box-shadow: 0px 0px 15px 0px #3A0101;
+	padding: 1em;
+}
+
+.horselisting {
+	border: 3px dashed #521E01;
+	background-image: -webkit-linear-gradient(270deg, rgba(0,0,0,0.10) 0%, rgba(78,1,1,0.00) 100%);
+	background-image: -moz-linear-gradient(270deg, rgba(0,0,0,0.10) 0%, rgba(78,1,1,0.00) 100%);
+	background-image: -o-linear-gradient(270deg, rgba(0,0,0,0.10) 0%, rgba(78,1,1,0.00) 100%);
+	background-image: linear-gradient(180deg, rgba(0,0,0,0.10) 0%, rgba(78,1,1,0.00) 100%);
+	-webkit-box-shadow: 0px 0px 15px 0px #3A0101;
+	box-shadow: 0px 0px 15px 0px #3A0101;
+	padding: 0.8em;
+}
+
+.horselisting ul {
+	padding: 10px;
+}
+
+.winnerhorselisting {
+	border: 2px double #180000;
+	background-image: -webkit-linear-gradient(270deg, rgba(0,0,0,0.10) 0%, rgba(78,1,1,0.00) 100%);
+	background-image: -moz-linear-gradient(270deg, rgba(0,0,0,0.10) 0%, rgba(78,1,1,0.00) 100%);
+	background-image: -o-linear-gradient(270deg, rgba(0,0,0,0.10) 0%, rgba(78,1,1,0.00) 100%);
+	background-image: linear-gradient(180deg, rgba(0,0,0,0.10) 0%, rgba(78,1,1,0.00) 100%);
+	-webkit-box-shadow: 0px 0px 15px 0px #2F0101;
+	box-shadow: 0px 0px 15px 0px #2F0101;
+	padding: 1em;
+	margin-left:auto;
+	margin-right:auto;
+	/* width:32%; */
+}
+
+.shortHorseDescription {
+	margin-left: 10px;
+}
+
+.longHorseDescription {
+	/*margin-left: 2em;*/
+}
+
+.detailsheader {
+	text-align: center;
+}
+
+
