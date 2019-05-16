@@ -159,6 +159,14 @@ li.social-link{
   margin-top: 25px;
 }
 
+.swipe{
+  display: none;
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  padding-left: 15px;
+}
+
 
 /*--Navigation--*/
 .rc_nav {
@@ -522,6 +530,14 @@ header{
   text-align: center;
   padding-top:15px;
   margin:0;
+}
+
+.swipe{
+  display: inline;
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  padding-left: 15px;
 }
 
 
